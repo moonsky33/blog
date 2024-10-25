@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>项目：若林档案馆初建</title>
+    <link href="/2024/10/19/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E8%8B%A5%E6%9E%97%E6%A1%A3%E6%A1%88%E9%A6%86%E5%88%9D%E5%BB%BA/"/>
+    <url>/2024/10/19/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E8%8B%A5%E6%9E%97%E6%A1%A3%E6%A1%88%E9%A6%86%E5%88%9D%E5%BB%BA/</url>
+    
+    <content type="html"><![CDATA[<p>因为前段时间服务器宕机，同时手上也有服务器权限，并且这个若林轻小说最开始也并不是我最开始做的，只是看群里有想做，当时暑假凌晨无聊刷手机碰巧遇到了，觉得很有意思就参与进来了，两个人，同时两个都是初学者。<br>这画面可想而知，好在慢慢来呗，最开始做了一个基于nodejs的小说投稿和记录存储的信息，即活动投稿专区，但是当时因为路径没调好，后来就换成了php了。<br>慢慢的，我们加了很多，比如后台控制前端页面的公告展示、以及自由天地的初步设置，不过我都是犯了一个最大的错误，都是因为相关案例页面设计太少。<br>最后南辕北辙，后来一看其他人也就是pxn联合社区他们的，突然就恍然大悟，其实也并不需要设计那么多复杂的东西啊，单纯的就只需要有一个地方的阅读和管理。<br>而我却脑子里只想着做起点读书那种效果，他们是网文，具有庞大字数，而我们轻小说字数相对来少只需要做好相应的侧纲的调整和切换即可。<br>当知道这个后也是八月中旬左右，我也一时无心力再去接着完善了。<br>直到10月初旬服务器宕机，很多东西都在里面无法显示，才突然意识到异地容灾、多地备份的重要性，而档案馆也应运而生，挂载到GitHub page上，完全的静态，也不用再担心服务器宕机什么的。<br>以下是该半成品的预览图<br><img src="/img/rolin/index.png" alt="首页"><br>首页的设计是由宇设计的，简洁明了。<br>接下来就是活动页面了<br><img src="/img/3.png" alt="活动"><br><img src="/img/4.png" alt="活动投稿"><br>接下来的活动公告和自由天地都是采用现成的动态博客搭建而成的<br><img src="/img/5.png" alt="自由天地"><br><img src="/img/1.png" alt="自有天地-内容展示"><br><img src="/img/2.png" alt="活动投稿"><br>有些时候确实是采用现有的会方便很多，当然也分很多种情况了，有些时候是为了学习和兴趣，有些时候只是为了工作。</p><p>而若林档案馆的建设是直接采用hexo-fluid主题，也是一款非常不错的主题的。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>若林</tag>
+      
+      <tag>项目</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>比赛：10月16日台州网络安全大赛预赛</title>
+    <link href="/2024/10/16/%E6%AF%94%E8%B5%9B%EF%BC%9A10%E6%9C%8816%E6%97%A5%E5%8F%B0%E5%B7%9E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E9%A2%84%E8%B5%9B/"/>
+    <url>/2024/10/16/%E6%AF%94%E8%B5%9B%EF%BC%9A10%E6%9C%8816%E6%97%A5%E5%8F%B0%E5%B7%9E%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E5%A4%A7%E8%B5%9B%E9%A2%84%E8%B5%9B/</url>
+    
+    <content type="html"><![CDATA[<p>时间匆忙，密码学的题目有两道，只解决第一道签到题，只能说可惜了，最后团队也没有晋升线下去打决赛，慢慢来好了。</p><p>密码学第一题附件是压缩包，第一层是8567、第二层是password，得到一个音频摩斯密码，直接随波逐流一把梭获得摩斯密码解出flag压缩包得到flag。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+      <tag>比赛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>见闻：玩了下朋友的galgame的demo</title>
+    <link href="/2024/10/05/%E8%A7%81%E9%97%BB%EF%BC%9A%E7%8E%A9%E4%BA%86%E4%B8%8B%E6%9C%8B%E5%8F%8B%E7%9A%84galgame%E7%9A%84demo/"/>
+    <url>/2024/10/05/%E8%A7%81%E9%97%BB%EF%BC%9A%E7%8E%A9%E4%BA%86%E4%B8%8B%E6%9C%8B%E5%8F%8B%E7%9A%84galgame%E7%9A%84demo/</url>
+    
+    <content type="html"><![CDATA[<p>前几天看到了结弦发了一下galgame的demo，本来当时10月1、2号就发的，但是因为GitHub page构建hexo的问题，所以现在来写。<br>该galgame用的是Ren’py<br>比如某文学部就是用该引擎做出来的<br>我还是挺期待这个游戏的，不过做一款galgame所耗费的时间是不小的，虽然现在demo是5分钟流程<br>但是还需要打磨剧本、音乐、立绘等<br>程序和剧本这两个倒还好，但音乐和立绘这些虽然目前可以用ai完成，但也需要努力一番。<br>或许日后时间充裕了感兴趣了我也是可以试着用该引擎来制作一个小流程游戏。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>见闻</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>见闻</tag>
+      
+      <tag>galgame</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  
+</search>
