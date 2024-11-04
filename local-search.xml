@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>比赛：11月2日2024年浙江省第七届大学生网络与信息安全竞赛预赛</title>
+    <link href="/blog/2024/11/04/%E6%AF%94%E8%B5%9B%EF%BC%9A2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%B8%83%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E9%A2%84%E8%B5%9B/"/>
+    <url>/blog/2024/11/04/%E6%AF%94%E8%B5%9B%EF%BC%9A2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%B8%83%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E9%A2%84%E8%B5%9B/</url>
+    
+    <content type="html"><![CDATA[<p>因为准备不充分以及刷题数量不够，导致成绩不算理想。时间也忙，延迟两天才赛后复现了。</p><h1 id="签到题有两题。"><a href="#签到题有两题。" class="headerlink" title="签到题有两题。"></a>签到题有两题。</h1><p>1.第一题网安知识大挑战，10道选择题，当时全部做了一遍发现都不对，看了源码发现源码有点问题但是也没有多想，后来赛后看了其他队的wp才发现这个需要写脚本。<br>2.签到第二题是解码，但是是base多层嵌套，base92 + 85 + 64 + 62 + 58 + 45 + 32 + 16，最后解得：DASCTF{welcome_to_zjctf_2024}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>比赛</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+      <tag>比赛</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>项目：若林档案馆初建</title>
     <link href="/blog/2024/10/19/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E8%8B%A5%E6%9E%97%E6%A1%A3%E6%A1%88%E9%A6%86%E5%88%9D%E5%BB%BA/"/>
     <url>/blog/2024/10/19/%E9%A1%B9%E7%9B%AE%EF%BC%9A%E8%8B%A5%E6%9E%97%E6%A1%A3%E6%A1%88%E9%A6%86%E5%88%9D%E5%BB%BA/</url>
