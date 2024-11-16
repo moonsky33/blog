@@ -27,7 +27,7 @@
 <meta property="og:description" content="浙江师范大学a1战队的刷题平台：https:&#x2F;&#x2F;ctf.a1natas.com&#x2F; 基础crypto 6道题 md5+sha256有人说md5加密和sha256加密是不可逆的，事实真的是这样吗？我窃取到了出题者的名字和生日泄露的信息你能帮我求出出题者的名字和生日吗md5(名字)&#x3D;653e4fd602c92cc7557d573cf4271b42sha256(生日)&#x3D;07334386">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-16T10:16:01.000Z">
-<meta property="article:modified_time" content="2024-11-16T10:30:23.321Z">
+<meta property="article:modified_time" content="2024-11-16T10:57:45.960Z">
 <meta property="article:author" content="明月清风">
 <meta property="article:tag" content="CTF">
 <meta property="article:tag" content="刷题">
@@ -236,7 +236,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          805 字
+          807 字
         
       </span>
     
@@ -304,9 +304,8 @@
 <p>根据提示得知兔子、栅栏，得知可能是兔子密码和栅栏密码<br><a target="_blank" rel="noopener" href="https://tool.oschina.net/encrypt/">https://tool.oschina.net/encrypt/</a><br>网站在线解密，选择rabbit，得出f_tbrnlAri_mse_eca{abci_vafegblo_}<br>再进入随波逐流一把梭里选择栅栏密码解密<br>得出该为w型栅栏密码解密<br>分为4栏时，解密结果为:flag{A_rabbit_climbs_over_a_fence}</p>
 <h1 id="变异凯撒"><a href="#变异凯撒" class="headerlink" title="变异凯撒"></a>变异凯撒</h1><p>题目：最近刚复习了等差数列，什么！？这凯撒里有等差数列&#x3D;&#x3D;&#x3D;<br>出题人：x1ao<br>gofncsvh_ttzpzs_fnwqpe_xj_t_wfs_twwhwrr<br>注：明文以flag开头，提交时请自行加上{}，对于_不参与加密</p>
 <p>一把梭出不来，题目提示等差数列和开头是flag<br>gofn和flag分别差多少位（g和f差1位，o和l差3位，f和a差5位，n和g差7位）<br>但是也仅限开头了，后面是什么不得而知，不过也差不多得出接下来的一个字母是什么了<br>通过数列通项公式：2n+1来进行计算<br>n的起始为0，使用ord和chr进行数字和字母的转换，ord是将字母转换为数字，chr是将数字转换为字母，小写字母a-z在ASCII码是97-122。<br>首先先把字母转换为数字然后减掉97（a是97减掉97就是0，b是98减掉97就是1），从而得到字母与a的距离差几位（凯撒密码是字母位移，题目要求是全小写字母，所以小写字母的开始是97），同时位移规律是数列通项公式2n+1，n是当前第几个数字，所以还要减掉2n+1，然后得出一个当前该字母的偏移量，又因为在ASCII码里小写字母a是从97开始的，所以还需要加上97，并且最后chr转回字母。<br>得出chr((ord(a)-97-(2*n+1))+97)<br>a是从键盘输入的数字，n是当前数列第几个<br>并且还需要限制只能是小写字母不能是大写字母<br>使用for循环，循环字符串，设立一个空字符串，转换后的字母放进去，下划线不用放</p>
-<p>‘’’<br>a &#x3D; ‘gofncsvh_ttzpzs_fnwqpe_xj_t_wfs_twwhwrr’<br>b &#x3D; ‘’<br>c &#x3D; 0</p>
-<p>for i in range(len(a)):<br>    if ‘a’ &lt;&#x3D; a[i] &lt;&#x3D; ‘z’:<br>        b +&#x3D; chr(((ord(a[i]) - 97 - (2 * c + 1)) % 26) + 97)<br>        c +&#x3D; 1<br>    else:<br>        b +&#x3D; ‘_’</p>
-<p>print(b)<br>‘’’<br>flag{this_caesar_cipher_is_a_bit_strange}</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs livecodeserver"><span class="hljs-keyword">a</span> = <span class="hljs-string">&#x27;gofncsvh_ttzpzs_fnwqpe_xj_t_wfs_twwhwrr&#x27;</span><br>b = <span class="hljs-string">&#x27;&#x27;</span><br>c = <span class="hljs-number">0</span><br><br><span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-built_in">len</span>(<span class="hljs-keyword">a</span>)):<br>    <span class="hljs-keyword">if</span> <span class="hljs-string">&#x27;a&#x27;</span> &lt;= <span class="hljs-keyword">a</span>[i] &lt;= <span class="hljs-string">&#x27;z&#x27;</span>:<br>        b += chr(((ord(<span class="hljs-keyword">a</span>[i]) - <span class="hljs-number">97</span> - (<span class="hljs-number">2</span> * c + <span class="hljs-number">1</span>)) % <span class="hljs-number">26</span>) + <span class="hljs-number">97</span>)<br>        c += <span class="hljs-number">1</span><br>    <span class="hljs-keyword">else</span>:<br>        b += <span class="hljs-string">&#x27;_&#x27;</span><br><br>print(b)<br></code></pre></td></tr></table></figure>
+<p>flag{this_caesar_cipher_is_a_bit_strange}</p>
 <h1 id="crypto指北（一）"><a href="#crypto指北（一）" class="headerlink" title="crypto指北（一）"></a>crypto指北（一）</h1><p>这是一个有用的crypto指北，相信你会喜欢上crypto<br>ryvke:&#x2F;&#x2F;abe.lnzkqnv.pi&#x2F;aqlxlowg-napamw mfsx kn m zjzd nqokwg GVQ ljwgmfvzp xt ljvpiuvdzk Aqwzgxnc kmwxetkbc bkotszb f dci. Yjzdi fzj lrsqn hmrd anfgvft PDPx bmtr itw iqii bt xvzqqmq wqwbew, ct K rar’y bjej itw cqvj, pf, lgxhg tay miax bohttbxjl nm, rrjp buzj gtn rrj hgmk:ktfz{Yxtvcqv_k1tj_1l_Scjhpx}</p>
 <p><a target="_blank" rel="noopener" href="https://www.guballa.de/vigenere-solver">https://www.guballa.de/vigenere-solver</a><br>在线解密一把梭<br>flag{Another_f1le_1s_Useful}</p>
 
