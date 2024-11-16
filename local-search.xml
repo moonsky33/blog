@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>刷题：A1::CTF-crypto-6</title>
+    <link href="/blog/2024/11/16/%E5%88%B7%E9%A2%98%EF%BC%9Aa1-crypto-6/"/>
+    <url>/blog/2024/11/16/%E5%88%B7%E9%A2%98%EF%BC%9Aa1-crypto-6/</url>
+    
+    <content type="html"><![CDATA[<p>浙江师范大学a1战队的刷题平台：<a href="https://ctf.a1natas.com/">https://ctf.a1natas.com/</a></p><p>基础crypto 6道题</p><h1 id="md5-sha256"><a href="#md5-sha256" class="headerlink" title="md5+sha256"></a>md5+sha256</h1><p>有人说md5加密和sha256加密是不可逆的，事实真的是这样吗？我窃取到了出题者的名字和生日泄露的信息你能帮我求出出题者的名字和生日吗<br>md5(名字)&#x3D;653e4fd602c92cc7557d573cf4271b42<br>sha256(生日)&#x3D;07334386287751ba02a4588c1a0875dbd074a61bd9e6ab7c48d244eacd0c99e0</p><p>注：提交flag时请以flag{名字＋生日}形式提交</p><p><a href="https://www.cmd5.com/default.aspx">https://www.cmd5.com/default.aspx</a></p><p>md5解密得：x1ao<br>sha256得：0101<br>flag{x1ao0101}</p><h1 id="morse"><a href="#morse" class="headerlink" title="morse"></a>morse</h1><p>..-. .-.. .- –. —-.– – —– .-. … . -.-. .. .–. …. . .-. —–.-<br>注：flag中的字母均为小写，提交时以flag{…}形式提交</p><p><a href="https://cyberchef.org/">https://cyberchef.org/</a><br>赛博厨子一把梭<br>得：FLAGM0RSECIPHER</p><p>flag{m0rsecipher}</p><h1 id="url"><a href="#url" class="headerlink" title="url"></a>url</h1><p>%66%6c%61%67%7b%61%6e%64%20%31%3d%31%7d</p><p><a href="http://www.hiencode.com/url.html">http://www.hiencode.com/url.html</a><br>flag{and 1&#x3D;1}</p><h1 id="eazy？"><a href="#eazy？" class="headerlink" title="eazy？"></a>eazy？</h1><p>提示：一只兔子翻过一个栅栏<br>出题人：x1ao<br>U2FsdGVkX18mDygR+W8X4i51cD0HTWwrjcCqXu&#x2F;CmLT7BrqvGnzaHSJZ&#x2F;rxowvnPCXs&#x3D;</p><p>根据提示得知兔子、栅栏，得知可能是兔子密码和栅栏密码<br><a href="https://tool.oschina.net/encrypt/">https://tool.oschina.net/encrypt/</a><br>网站在线解密，选择rabbit，得出f_tbrnlAri_mse_eca{abci_vafegblo_}<br>再进入随波逐流一把梭里选择栅栏密码解密<br>得出该为w型栅栏密码解密<br>分为4栏时，解密结果为:flag{A_rabbit_climbs_over_a_fence}</p><h1 id="变异凯撒"><a href="#变异凯撒" class="headerlink" title="变异凯撒"></a>变异凯撒</h1><p>题目：最近刚复习了等差数列，什么！？这凯撒里有等差数列&#x3D;&#x3D;&#x3D;<br>出题人：x1ao<br>gofncsvh_ttzpzs_fnwqpe_xj_t_wfs_twwhwrr<br>注：明文以flag开头，提交时请自行加上{}，对于_不参与加密</p><p>一把梭出不来，题目提示等差数列和开头是flag<br>gofn和flag分别差多少位（g和f差1位，o和l差3位，f和a差5位，n和g差7位）<br>但是也仅限开头了，后面是什么不得而知，不过也差不多得出接下来的一个字母是什么了<br>通过数列通项公式：2n+1来进行计算<br>n的起始为0，使用ord和chr进行数字和字母的转换，ord是将字母转换为数字，chr是将数字转换为字母，小写字母a-z在ASCII码是97-122。<br>首先先把字母转换为数字然后减掉97（a是97减掉97就是0，b是98减掉97就是1），从而得到字母与a的距离差几位（凯撒密码是字母位移，题目要求是全小写字母，所以小写字母的开始是97），同时位移规律是数列通项公式2n+1，n是当前第几个数字，所以还要减掉2n+1，然后得出一个当前该字母的偏移量，又因为在ASCII码里小写字母a是从97开始的，所以还需要加上97，并且最后chr转回字母。<br>得出chr((ord(a)-97-(2*n+1))+97)<br>a是从键盘输入的数字，n是当前数列第几个<br>并且还需要限制只能是小写字母不能是大写字母<br>使用for循环，循环字符串，设立一个空字符串，转换后的字母放进去，下划线不用放</p><p>‘’’<br>a &#x3D; ‘gofncsvh_ttzpzs_fnwqpe_xj_t_wfs_twwhwrr’<br>b &#x3D; ‘’<br>c &#x3D; 0</p><p>for i in range(len(a)):<br>    if ‘a’ &lt;&#x3D; a[i] &lt;&#x3D; ‘z’:<br>        b +&#x3D; chr(((ord(a[i]) - 97 - (2 * c + 1)) % 26) + 97)<br>        c +&#x3D; 1<br>    else:<br>        b +&#x3D; ‘_’</p><p>print(b)<br>‘’’<br>flag{this_caesar_cipher_is_a_bit_strange}</p><h1 id="crypto指北（一）"><a href="#crypto指北（一）" class="headerlink" title="crypto指北（一）"></a>crypto指北（一）</h1><p>这是一个有用的crypto指北，相信你会喜欢上crypto<br>ryvke:&#x2F;&#x2F;abe.lnzkqnv.pi&#x2F;aqlxlowg-napamw mfsx kn m zjzd nqokwg GVQ ljwgmfvzp xt ljvpiuvdzk Aqwzgxnc kmwxetkbc bkotszb f dci. Yjzdi fzj lrsqn hmrd anfgvft PDPx bmtr itw iqii bt xvzqqmq wqwbew, ct K rar’y bjej itw cqvj, pf, lgxhg tay miax bohttbxjl nm, rrjp buzj gtn rrj hgmk:ktfz{Yxtvcqv_k1tj_1l_Scjhpx}</p><p><a href="https://www.guballa.de/vigenere-solver">https://www.guballa.de/vigenere-solver</a><br>在线解密一把梭<br>flag{Another_f1le_1s_Useful}</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>刷题</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>CTF</tag>
+      
+      <tag>刷题</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>比赛：11月2日2024年浙江省第七届大学生网络与信息安全竞赛预赛</title>
     <link href="/blog/2024/11/04/%E6%AF%94%E8%B5%9B%EF%BC%9A2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%B8%83%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E9%A2%84%E8%B5%9B/"/>
     <url>/blog/2024/11/04/%E6%AF%94%E8%B5%9B%EF%BC%9A2024%E5%B9%B4%E6%B5%99%E6%B1%9F%E7%9C%81%E7%AC%AC%E4%B8%83%E5%B1%8A%E5%A4%A7%E5%AD%A6%E7%94%9F%E7%BD%91%E7%BB%9C%E4%B8%8E%E4%BF%A1%E6%81%AF%E5%AE%89%E5%85%A8%E7%AB%9E%E8%B5%9B%E9%A2%84%E8%B5%9B/</url>
